@@ -1,0 +1,152 @@
+/* ===== Global Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Romantic Animated Background ===== */
+body {
+    background: linear-gradient(-45deg, #ff9a9e, #ff7eb3, #fad0c4, #ffc3a0);
+    background-size: 400% 400%;
+    animation: romanticBG 12s ease infinite;
+    font-family: 'Segoe UI', sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Background animation */
+@keyframes romanticBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ===== Main Romantic Card ===== */
+.container {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+
+    width: 100%;
+    max-width: 500px;
+
+    padding: 30px 25px;
+    border-radius: 30px;
+
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* ===== Headings ===== */
+h1 {
+    color: #ff4d6d;
+    font-size: 26px;
+}
+
+h2 {
+    color: #333;
+    font-size: 20px;
+}
+
+/* ===== Romantic Image ===== */
+.romantic-pic {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease;
+}
+
+.romantic-pic:hover {
+    transform: scale(1.04);
+}
+
+/* ===== Buttons ===== */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Common button style */
+button {
+    padding: 12px 26px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+/* Yes button */
+#yesBtn {
+    background-color: #ff4d6d;
+    color: white;
+    box-shadow: 0 6px 15px rgba(255, 77, 109, 0.5);
+}
+
+#yesBtn:hover {
+    transform: scale(1.08);
+}
+
+/* No button */
+#noBtn {
+    background-color: #ddd;
+}
+
+/* Romantic Message */
+#message {
+    font-size: 17px;
+    color: #ff4d6d;
+    font-weight: bold;
+    min-height: 24px;
+}
+
+/* ===== Bouquet ===== */
+.bouquet {
+    font-size: 38px;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.6s ease;
+}
+
+.bouquet.show {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 480px) {
+
+    .container {
+        padding: 25px 18px;
+        border-radius: 25px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
